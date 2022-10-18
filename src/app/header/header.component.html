@@ -1,22 +1,23 @@
-<nav class="header navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Recipe Book</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Recipe Book</a>
+    </div>
 
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link"
-                              (click)="onSelect('recipe')"
-                              href="#">Recipes</a></li>
-      <li class="nav-item"><a class="nav-link" 
-                              (click)="onSelect('shopping-list')"
-                              href="#">Shopping List</a></li>
-    </ul>
-
-    <ul class="navbar-nav navbar-right">
-      <li class="nav-item"><a class="nav-link" href="#">Save Data</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Fetch Data</a></li>
-    </ul>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#" (click)="onSelect('recipe')">Recipes</a></li>
+        <li><a href="#" (click)="onSelect('shopping-list')">Shopping List</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" appDropdown>
+          <a href="#" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Save Data</a></li>
+            <li><a href="#">Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

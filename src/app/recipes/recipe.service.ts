@@ -29,7 +29,11 @@ export class RecipeService {
   constructor(private slService: ShoppingListService) {}
 
   getRecipes() {
-    return this.recipes.slice();
+    return this.recipes.slice(); // return new exact copy
+  }
+
+  getRecipe(index: number) {
+    return this.recipes.slice()[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
